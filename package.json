@@ -5,11 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "npm run build && next export"
   },
   "dependencies": {
+    "@tryghost/content-api": "^1.4.1",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "frontmatter-markdown-loader": "^3.4.0"
   }
 }
