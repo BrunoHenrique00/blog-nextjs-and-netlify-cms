@@ -2,21 +2,24 @@ backend:
   name: git-gateway
   branch: master
 media_folder: public/img
-public_folder: img
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '_'
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+      - label: 'Meus Posts'
+        name: 'home'
+        file: 'content/home.md'
+        fields:
+          - label: 'Posts'
+            name: "posts"
+            widget: list
+            fields:
+              - {label: 'Título', name: 'title', widget: 'string' }
+              - {label: 'Publish Date', name: 'date', widget: 'datetime' }
+              - {label: "Descrição", name: "description", widget: "text"}
+              - {label: 'Imagem', name: 'thumbnail', widget: 'image', required: true }
+              - {label: "Sobre o post", name: "about", widget: "markdown" }

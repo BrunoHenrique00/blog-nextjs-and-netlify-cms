@@ -1,3 +1,5 @@
+
+
 module.exports = {
     webpack: (cfg) => {
         cfg.module.rules.push(
@@ -8,5 +10,26 @@ module.exports = {
             }
         )
         return cfg;
-    }
+    },
+    module: {
+        rules: [
+          {
+            // ...
+            use: [
+              // ...
+              {
+                loader: 'postcss-loader',
+                options: {
+                  ident: 'postcss',
+                  plugins: [
+                    require('tailwindcss'),
+                    require('autoprefixer'),
+                  ],
+                },
+              },
+            ],
+          }
+        ],
+      }
 }
+
