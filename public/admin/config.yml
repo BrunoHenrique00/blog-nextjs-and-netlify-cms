@@ -18,7 +18,7 @@ collections:
             name: "posts"
             widget: list
             fields:
-              - {label: 'Título', name: 'title', widget: 'string' }
+              - {label: 'Título', name: 'name', widget: 'string' }
               - {label: 'Publish Date', name: 'date', widget: 'datetime' }
               - {label: "Descrição", name: "description", widget: "text"}
               - {label: 'Imagem', name: 'thumbnail', widget: 'image', required: true }
