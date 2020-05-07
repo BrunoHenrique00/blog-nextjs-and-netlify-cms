@@ -12,19 +12,23 @@ export default function Nav(){
             <ul className="flex mr-10 space-between space-x-3  rounded ">
                 <li>
                     <a href="https://github.com/BrunoHenrique00" target="_blank">
-                        <img src="/GitHub_Logo_White.png" style={{width:110, height:40}} className="hover:bg-gray-600 rounded"/>
+                        <img src="/GitHub_Logo_White.png" style={{width:110, height:40}} className="hover:bg-gray-600 rounded" alt='Github profile'/>
                     </a>
                 </li>
-                    <img src="/user.png" style={{width:37, height:37}} className="hidden  sm:inline "/>
+                    <img src="/user.png" style={{width:37, height:37}} className="hidden  sm:inline " alt='sobre'/>
                 <Link href='/sobre'>
                 <li className="bg-indigo-800 hover:bg-gray-600 rounded p-2 hidden sm:inline">
-                    Sobre
+                    <a>
+                        Sobre
+                    </a>
                 </li>
                 </Link>
-                    <img src="/card.png" style={{width:43, height:43}} className="hidden sm:inline" />
+                    <img src="/card.png" style={{width:43, height:43}} className="hidden sm:inline" alt='contato'/>
                 <Link href='/contato'>
                 <li className="hidden sm:inline bg-indigo-800 hover:bg-gray-600 rounded p-2 h-auto">
-                    Contato
+                    <a>
+                        Contato
+                    </a>
                 </li>
                 </Link>
                 <button type="button" className="sm:hidden block text-gray-500 hover:text-white focus:text-white focus:outline-none">

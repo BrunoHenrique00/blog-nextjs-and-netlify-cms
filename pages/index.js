@@ -37,7 +37,8 @@ export default function Home({paths,posts}) {
         <title>Simple Tech</title>
         <link rel="icon" href="/writing.png" />
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <link href="../main.css" rel="stylesheet" />
+        <link href="../styles/input.css" rel="stylesheet" />
+        <meta name='description' content='Blog sobre programacao e tecnologias atuais' />
 
       </Head>
 

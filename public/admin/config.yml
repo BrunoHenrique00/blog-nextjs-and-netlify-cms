@@ -11,7 +11,7 @@ collections:
       Posts sobre tecnologia e programacao
     folder: 'content/blog'
     slug: '{{slug}}'
-    summary: '{{title}}'
+    summary: 'Titulo: {{name}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: 'Título', name: 'name', widget: 'string' }

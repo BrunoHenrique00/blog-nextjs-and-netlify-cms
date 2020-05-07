@@ -41,7 +41,7 @@ export default function Blog({data}){
             <div className="text-center bg-white rounded m-3 w-full -m-8 sm:-m-0 " >
                 <h2 className="self-auto m-2  px-2 w-auto inline-block rounded text-2xl shadow-md">{data.name}</h2>
                     <div className="max-w-xl m-auto">
-                        <img src={data.thumbnail === null ? `` : `${data.thumbnail}`} className="m-auto object-fill object-center p-10 "/>
+                        <img src={data.thumbnail === null ? `` : `${data.thumbnail}`} className="m-auto object-fill object-center p-10 " alt={data.name}/>
                     </div>
                     <p className="text-justify p-2 font-medium ">{data.description}</p>
                 <p className="text-justify text-center p-2 mt-3 mb-3">{data.about}</p>
