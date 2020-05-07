@@ -3,11 +3,34 @@ import { Component } from 'react'
 import Nav from '../components/Nav'
 import MeusPosts from '../components/MeusPosts'
 import Welcome from '../components/Welcome';
+import fs from 'fs'
+import matter from 'gray-matter'
 
 
+export const getStaticProps = async () =>{
 
-export default function Home() {
+  const files = fs.readdirSync('content/blog')
+  {/*Puxa o conteudo dos posts */}
+  const posts = files.map(file =>{
+    const markdown = fs.readFileSync(`content/blog/${file}`).toString()
+    const parsedMarkdown = matter(markdown)
 
+    return({
+            data: parsedMarkdown.data
+          }
+        )
+    })
+
+  return{
+    props:{
+      paths: files.map(file => file.replace('.md', '')),
+      posts: posts
+      }
+    }
+}
+
+
+export default function Home({paths,posts}) {
   return (
     <div className="">
       <Head>
@@ -20,9 +43,9 @@ export default function Home() {
 
       <Nav />
   
-      <Welcome />
+      <Welcome  />
 
-      <MeusPosts />
+      <MeusPosts posts={posts} paths={paths}/>
       
     </div>
     

@@ -1,25 +1,20 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: master
-media_folder: public/img
-slug:
-  encoding: 'ascii'
-  clean_accents: true
-  sanitize_replacement: '_'
+media_folder: "img/"
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    files:
-      - label: 'Meus Posts'
-        name: 'home'
-        file: 'content/home.md'
-        fields:
-          - label: 'Posts'
-            name: "posts"
-            widget: list
-            fields:
-              - {label: 'Título', name: 'name', widget: 'string' }
-              - {label: 'Publish Date', name: 'date', widget: 'datetime' }
-              - {label: "Descrição", name: "description", widget: "text"}
-              - {label: 'Imagem', name: 'thumbnail', widget: 'image', required: true }
-              - {label: "Sobre o post", name: "about", widget: "markdown" }
+  - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
+    identifier_field: name
+    label: 'Posts' # Used in the UI
+    label_singular: 'Post' # Used in the UI, ie: "New Post"
+    description: >
+      Posts sobre tecnologia e programacao
+    folder: 'content/blog'
+    slug: '{{slug}}'
+    summary: '{{title}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: 'Título', name: 'name', widget: 'string' }
+      - {label: "Descrição", name: "description", widget: "text"}
+      - {label: 'Imagem', name: 'thumbnail', widget: 'image' ,required: false}
+      - {label: "Sobre o post", name: "about", widget: "markdown" }
