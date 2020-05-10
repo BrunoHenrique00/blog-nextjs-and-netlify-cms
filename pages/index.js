@@ -3,6 +3,7 @@ import { Component } from 'react'
 import Nav from '../components/Nav'
 import MeusPosts from '../components/MeusPosts'
 import Welcome from '../components/Welcome';
+import Header from "../components/Header";
 import fs from 'fs'
 import matter from 'gray-matter'
 
@@ -33,14 +34,7 @@ export const getStaticProps = async () =>{
 export default function Home({paths,posts}) {
   return (
     <div className="">
-      <Head>
-        <title>Simple Tech</title>
-        <link rel="icon" href="/writing.png" />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <link href="../styles/input.css" rel="stylesheet" />
-        <meta name='description' content='Blog sobre programacao e tecnologias atuais' />
-
-      </Head>
+      <Header />
 
       <Nav />
   

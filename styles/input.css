@@ -1,5 +1,20 @@
 @tailwind base;
 
+#content h2{
+    @apply text-center font-bold p-2
+}
+body {
+    font-family: 'Josefin Sans', monospace;
+}
+html{
+    @apply bg-indigo-800
+}
+#content ul{
+    list-style-type: circle;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
 @tailwind components;
 
 @tailwind utilities;

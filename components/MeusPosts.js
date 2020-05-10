@@ -3,10 +3,10 @@ import Link from 'next/link'
 export default function MeusPosts({posts,paths}){
     return(
     <>
-      <div className="text-center w-screen p-1">
+      <div className="text-center w-screen p-1 bg-white h-full pb-10 ">
             <h2 className="bg-gray-800 text-white w-auto p-2 mt-5 inline-block rounded text-4xl">Posts</h2>
       </div>
-      <div className=" flex justify-between m-10 flex-wrap ">
+      <div className=" flex justify-between pb-10 flex-wrap bg-white h-full ">
             <img src="/bate-papo.png" style={{height: 160, width: 160 }} className="m-auto p-2  rounded " alt='conversa'/>
             <p className="m-auto w-64 rounded  p-4 shadow-md">Nesta área de posts vou comentar sobre as tecnologias atuais e as que eu, particularmente uso!</p>
       </div> 

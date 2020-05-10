@@ -6,7 +6,7 @@ export default function Welcome(){
                     Bem vindo a minha página de blog, aqui eu vou documentar boa parte do meu aprendizado e talvez ajudar alguém que teve os mesmos problemas que eu, nessa caminhada na carreira de tecnologia.
                 </p>
             </div>
-            <div className="w-screen sm:w-3/6 text-center self-center p-10">
+            <div className="w-screen sm:w-3/6 text-center self-center p-16 bg-white">
                 <p className="">
                     Feito em NextJS, por... Bruno Henrique! ❤️ 
                 </p> 

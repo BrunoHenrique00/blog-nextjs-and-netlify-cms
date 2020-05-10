@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Nav(){
     return(
-    <nav className="flex w-screen bg-indigo-900 h-20 font-mono font-text-6xl justify-between items-center text-white">
+    <nav className="flex w-screen bg-indigo-900 h-20 font-text-6xl justify-between items-center text-white">
         <div className="text-2xl sm:text-3xl bg-indigo-800 h-auto ml-4 rounded p-1">
             <Link href="/">
                 <h1>Simple Tech</h1>
