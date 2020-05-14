@@ -17,13 +17,15 @@ export default function MeusPosts({posts,paths}){
             <li className="text-center bg-white rounded m-3 " key={k}>
               <h2 className="self-auto m-2  px-2 w-auto inline-block rounded text-2xl shadow-md">{post.data.name}</h2>
               <p className="text-justify p-2 font-light">{post.data.description}</p>
-              <Link as={`/blog/${paths[k]}`} href='/blog/[slug]'>
                 <button className="m-3">
                   <span className="text-white rounded p-1 bg-gray-800">
+                    <Link as={`/blog/${paths[k]}`} href='/blog/[slug]' passHref>
+                    <a>
                     Leia mais...
+                    </a>
+                    </Link>
                   </span>
                 </button>
-              </Link>
             </li>
           ))}
         </ul> 
